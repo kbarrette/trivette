@@ -1,4 +1,4 @@
-# trivette
+# trivette [![kbarrettte](https://circleci.com/gh/kbarrette/trivette.svg?style=svg)](https://circleci.com/gh/kbarrette/trivette)
 Run [Sidekiq](https://sidekiq.org/) jobs in sequence
 
 ![Trivette](https://user-images.githubusercontent.com/896780/82163664-a206ad00-987a-11ea-91b4-22fb8bf845f0.jpg)
