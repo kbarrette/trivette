@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.license = 'MIT'
   s.homepage = 'https://github.com/kbarrette/trivette'
 
-  s.files = Dir['{lib}/**/*.rb']
+  s.files = Dir['{lib}/**/*.rb', 'LICENSE', 'README.md']
   s.require_path = 'lib'
 
   s.add_dependency 'activesupport'
