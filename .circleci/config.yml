@@ -20,7 +20,7 @@ jobs:
       - ruby/rspec-test
       - run:
           name: Lint
-          command: bundle exec rubocop
+          command: bundle exec standardrb
 
 workflows:
   build_and_test:

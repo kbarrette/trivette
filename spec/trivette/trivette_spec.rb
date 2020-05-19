@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
-require 'sidekiq/testing'
+require "sidekiq/testing"
 Sidekiq::Testing.inline!
 
 RSpec.describe Trivette do
-  describe '.run_async' do
-    it 'runs the steps in order' do
+  describe ".run_async" do
+    it "runs the steps in order" do
       expect_any_instance_of(Trivette::TestStepOne)
         .to receive(:run)
-        .with('other args')
+        .with("other args")
         .once
       expect_any_instance_of(Trivette::TestStepTwo)
         .to receive(:run)
-        .with('other args')
+        .with("other args")
         .once
       expect_any_instance_of(Trivette::TestStepThree)
         .to receive(:run)
-        .with('other args')
+        .with("other args")
         .once
 
       Trivette.run(
@@ -25,7 +25,7 @@ RSpec.describe Trivette do
           Trivette::TestStepTwo,
           Trivette::TestStepThree
         ],
-        'other args'
+        "other args"
       )
     end
   end

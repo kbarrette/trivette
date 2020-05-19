@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'trivette/version'
-require 'trivette/worker'
+require "trivette/version"
+require "trivette/worker"
 
 # Main entry points
 module Trivette
