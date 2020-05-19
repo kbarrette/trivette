@@ -2,7 +2,8 @@
 
 module Trivette
   class TestStep < Trivette::Worker
-    def run(*args); end
+    def run(*args)
+    end
   end
 
   TestStepOne = Class.new(TestStep)

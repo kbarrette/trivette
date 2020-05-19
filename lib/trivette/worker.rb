@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'active_support/inflector'
-require 'sidekiq'
+require "active_support/inflector"
+require "sidekiq"
 
 module Trivette
   # A Sidekiq worker that runs tasks in sequence
