@@ -4,7 +4,7 @@ module Trivette
   class TestStep
     include Trivette::Worker
 
-    def run(*args)
+    def execute(*args)
     end
   end
 

@@ -13,14 +13,14 @@ Create workflow steps that look like this:
 class YourStep
   include Trivette::Worker
 
-  def run(arg1, arg2, arg3);
+  def execute(arg1, arg2, arg3);
     # your code here
   end
 end
 
 class YourNextStep
   include Trivette::Worker
-  def run(arg1, arg2, arg3);
+  def execute(arg1, arg2, arg3);
     # your code here
   end
 end
@@ -29,7 +29,7 @@ end
 Then tell Trivette to run the steps in whatever order you want:
 
 ```ruby
-Trivette.run(
+Trivette.execute(
   [YourStep, YourNextStep],
   'arg one', 'arg two', 'arg three'
 )
@@ -39,5 +39,7 @@ Trivette.run(
 * `Trivette::Worker` includes `Sidekiq::Worker`. Any configuration that would
   normally work there should work in your steps. Any limitations that
   apply to Sidekiq jobs will apply to your step.
+* The method name `#execute` may not be ideal, but it avoids stepping on the
+  toes of the proprietary code this is mean to live alongside.
 * Your steps will all be passed the same args, and all the usual Sidkiq
-  argument limitations apply
+  argument limitations apply.
