@@ -20,7 +20,7 @@ jobs:
       - ruby/rspec-test
       - run:
           name: Lint
-          command: bundle exec standardrb
+          command: bundle exec rake standard
 
 workflows:
   build_and_test:

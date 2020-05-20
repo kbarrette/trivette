@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.add_dependency "activesupport"
   s.add_dependency "sidekiq"
 
+  s.add_development_dependency "rake"
   s.add_development_dependency "rspec"
   s.add_development_dependency "rspec_junit_formatter"
   s.add_development_dependency "standard"
