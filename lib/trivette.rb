@@ -3,10 +3,12 @@
 require "trivette/version"
 require "trivette/worker"
 
+require "trivette/job"
+
 # Main entry points
 module Trivette
   def self.run(steps, *args)
-    Worker.perform_async(
+    Trivette::Job.perform_async(
       steps.map(&:to_s),
       *args
     )
