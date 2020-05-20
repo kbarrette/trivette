@@ -10,13 +10,16 @@ Run [Sidekiq](https://sidekiq.org/) jobs in sequence
 Create workflow steps that look like this:
 
 ```ruby
-class YourStep < Trivette::Worker
+class YourStep
+  include Trivette::Worker
+
   def run(arg1, arg2, arg3);
     # your code here
   end
 end
 
-class YourNextStep < Trivette::Worker
+class YourNextStep
+  include Trivette::Worker
   def run(arg1, arg2, arg3);
     # your code here
   end
@@ -33,7 +36,7 @@ Trivette.run(
 ```
 
 # Notes:
-* `Trivette::Worker` is a basic Sidekiq job. Any configuration that would
+* `Trivette::Worker` includes `Sidekiq::Worker`. Any configuration that would
   normally work there should work in your steps. Any limitations that
   apply to Sidekiq jobs will apply to your step.
 * Your steps will all be passed the same args, and all the usual Sidkiq

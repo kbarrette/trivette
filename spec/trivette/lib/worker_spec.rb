@@ -7,7 +7,7 @@ RSpec.describe Trivette::Worker do
         .to receive(:run)
         .with(1, "two", 3)
 
-      subject.perform([Trivette::TestStep.to_s], 1, "two", 3)
+      Trivette::TestStep.new.perform([Trivette::TestStep.to_s], 1, "two", 3)
     end
   end
 end

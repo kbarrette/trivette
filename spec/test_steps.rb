@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 module Trivette
-  class TestStep < Trivette::Worker
+  class TestStep
+    include Trivette::Worker
+
     def run(*args)
     end
   end
