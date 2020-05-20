@@ -7,7 +7,7 @@ require "trivette/job"
 
 # Main entry points
 module Trivette
-  def self.run(steps, *args)
+  def self.execute(steps, *args)
     Trivette::Job.perform_async(
       steps.map(&:to_s),
       *args
